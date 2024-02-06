@@ -91,7 +91,7 @@ def logInPage():
         try:
             server = smtplib.SMTP("smtp.gmail.com", 587)
             server.starttls()
-            server.login("hammadalipbt18@gmail.com", "cdyysxzrjellwrba")
+            server.login("hammadalipbt18@gmail.com", "YOUR_GMAIL_PASSKEY")
             otp = random.randint(1000, 9999)
             server.sendmail("hammadalipbt18@gmail.com", email, f"Your Otp for Ride On Whale Email Verification is {otp}")
             return str(otp)
@@ -103,7 +103,7 @@ def logInPage():
             cursor.execute(f"SELECT PASSWORD FROM USERS WHERE EMAIL = '{email}';")
             server = smtplib.SMTP("smtp.gmail.com", 587)
             server.starttls()
-            server.login("hammadalipbt18@gmail.com", "cdyysxzrjellwrba")
+            server.login("hammadalipbt18@gmail.com", "YOUR_GMAIL_PASSKEY")
             password = cursor.fetchone()[0]
             server.sendmail("hammadalipbt18@gmail.com", email, f"Your Password of Ride On Whale Account is {password}")
             return True
