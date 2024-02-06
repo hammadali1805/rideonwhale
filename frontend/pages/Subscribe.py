@@ -45,7 +45,7 @@ def subscribePage():
         try:
             server = smtplib.SMTP("smtp.gmail.com", 587)
             server.starttls()
-            server.login("hammadalipbt18@gmail.com", "cdyysxzrjellwrba")
+            server.login("hammadalipbt18@gmail.com", "YOUR_GMAIL_PASSKEY")
             server.sendmail("hammadalipbt18@gmail.com", "rideonwhale@gmail.com" , f"{st.session_state.email} subscribed with transaction id {id}")
             return True
         except:
